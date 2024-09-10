@@ -1,5 +1,6 @@
 import os
 import requests
+# from secrets_1 import Secrets
 
 def main():
     image_folder = 'images'
@@ -19,7 +20,7 @@ def main():
             'https://api.remove.bg/v1.0/removebg',
             files={'image_file': open(image_path, 'rb')},
             data={'size': 'auto'},
-            headers={'X-Api-Key': 'INSERT_YOUR_API_KEY_HERE'},
+            headers={'X-Api-Key': 'JDUiX7zD4bbuvoWUiwx7aUW9'},
         )
         if response.status_code == requests.codes.ok:
             output_path = os.path.join(output_folder, f'no-bg-{image_file}')
